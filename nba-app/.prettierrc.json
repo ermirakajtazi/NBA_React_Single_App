@@ -1,0 +1,10 @@
+{
+  "useTabs": false,
+  "spaces":2,
+	"tabWidth": 2,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "bracketSpacing": true,
+  "parser": "typescript",
+	"arrow-parens": 0
+}
