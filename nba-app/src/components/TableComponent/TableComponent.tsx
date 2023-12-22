@@ -17,7 +17,7 @@ export const Table = ({
   children,
   rightNode,
 }: ITable) => (
-  <div className="bg-[#191919] text-[#dedede]">
+  <div className="bg-bgPrimary text-textColor">
     <div className="px-5 py-3">
       {title && (
         <div className="flex flex-wrap">
@@ -31,7 +31,7 @@ export const Table = ({
         <p className="my-2 text-headerColor font-bold text-13">{description}</p>
       )}
     </div>
-    <div className="flex flex-col text-[#dedede]">
+    <div className="flex flex-col text-textColor">
       {toolbar && <div className="w-full p-2">{toolbar}</div>}
       <div className="overflow-x-auto">
         <div className="inline-block min-w-full pt-2 align-middle">
@@ -41,7 +41,7 @@ export const Table = ({
                 {headers.map((header) => (
                   <td
                     key={header}
-                    className="px-3 py-3.5 text-left text-lg font-semibold text-[#dedede]"
+                    className="px-3 py-3.5 text-left text-lg font-semibold text-textColor"
                   >
                     {header}
                   </td>
@@ -49,24 +49,6 @@ export const Table = ({
               </tr>
             </thead>
             {children}
-            {/* <tbody className="divide-gray-20">
-              {page?.total_count === 0 && (
-                <tr>
-                  <p className="p-10 animate-bounce font-secondary font-bold text-lg text-dark">
-                    There is no data for the moment
-                  </p>
-                </tr>
-              )}
-              {isLoading && (
-                <tr className="w-full text-center p-2 text-sm text-primary-light animate-pulse">
-                  {headers.map((header) => (
-                    <td key={header}>
-                      <LoadingSkeleton />
-                    </td>
-                  )) || 'There is no data'}
-                </tr>
-              )}
-            </tbody> */}
           </table>
         </div>
       </div>

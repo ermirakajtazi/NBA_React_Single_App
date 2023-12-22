@@ -7,4 +7,5 @@ export interface IPaginationPayload<T> {
     per_page: number;
     total_count: number;
   };
+  status: number;
 }

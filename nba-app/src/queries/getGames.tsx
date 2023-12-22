@@ -1,16 +1,22 @@
 import axios from 'axios';
 import { IPaginationPayload } from '../shared/Interfaces/IPaginationPayload';
-import { ITeamsListInterface } from '../shared/Interfaces/ITeamsInterface';
+import { IGamesInterface } from '../shared/Interfaces/IGamesInterface';
 import { baseUrl, getHeaders } from '../utils/apiConfig';
 
-export const getAllTeams = async (current_page: number, perPage: number) => {
+export const getGames = async (
+  current_page: number,
+  perPage: number,
+  teamsIds: string[],
+) => {
   try {
-    const response = await axios.request<
-      IPaginationPayload<ITeamsListInterface>
-    >({
+    const response = await axios.request<IPaginationPayload<IGamesInterface>>({
       method: 'GET',
-      url: `${baseUrl}teams`,
-      params: { page: current_page, per_page: perPage },
+      url: `${baseUrl}games`,
+      params: {
+        page: current_page,
+        per_page: perPage,
+        team_ids: teamsIds,
+      },
       headers: getHeaders(),
     });
 

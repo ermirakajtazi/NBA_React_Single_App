@@ -64,12 +64,6 @@
     "react-hooks/exhaustive-deps": "warn",
     "import/prefer-default-export": "off",
     "react/prop-types": "off",
-    "prettier/prettier": [
-      "error",
-      {
-        "endOfLine": "auto"
-      }
-    ],
     "object-curly-newline": [
       "error",
       {
@@ -102,12 +96,24 @@
       "error",
       "windows"
     ],
+    "operator-linebreak": [
+      "warn",
+      "after"
+    ],
     "jsx-a11y/control-has-associated-label": "off",
     "import/no-extraneous-dependencies": "off",
     "@typescript-eslint/no-var-requires": "off",
-    "no-nested-ternary": "off",
+    "no-nested-ternary": "warn",
     "camelcase": "off",
-    "no-unused-vars": "warn"
+    "no-unused-vars": "warn",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "implicit-arrow-linebreak": "warn",
+    "react/jsx-wrap-multilines": "off"
   },
   "settings": {
     "import/resolver": {

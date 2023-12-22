@@ -1,9 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Toaster } from 'react-hot-toast';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Overview } from './pages/Overview/Overview';
 import { AllTeams } from './pages/Teams/AllTeams';
+import { TeamRoster } from './pages/Roster/TeamRoster';
+import { PlayerStats } from './pages/PlayerStats/PlayerStats';
+import { Games } from './pages/Games/Games';
+import { GameStats } from './pages/GameStats/GameStats';
 
 function App() {
   const queryClient = new QueryClient({
@@ -21,11 +24,14 @@ function App() {
           <Routes>
             <Route element={<Overview />}>
               <Route path="/" element={<AllTeams />} />
+              <Route path="/roster" element={<TeamRoster />} />
+              <Route path="/player-stats" element={<PlayerStats />} />
+              <Route path="/games" element={<Games />} />
+              <Route path="/games-stats" element={<GameStats />} />
             </Route>
           </Routes>
         </BrowserRouter>
       </QueryClientProvider>
-      <Toaster position="bottom-right" reverseOrder={false} />
     </div>
   );
 }

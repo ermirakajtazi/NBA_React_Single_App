@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-const colors = require('tailwindcss/colors');
 
 module.exports = {
   content: [
@@ -9,15 +8,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
       colors: {
-        ...colors,
-        primary: colors.purple,
-        secondary: colors.pink,
+        bgPrimary: '#191919',
+        textColor: '#dedede',
+        bgSecondary: '#121212',
+        bgOverview: '#0d0d0d',
       },
     },
   },
