@@ -11,6 +11,7 @@ This project is a web application focused on NBA-related data.
 - [React Router DOM](https://reactrouter.com/web/guides/quick-start) - Declarative routing for React.js.
 - [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom designs.
 - [TypeScript](https://www.typescriptlang.org/) - A superset of JavaScript that adds static types.
+- [Heroicons]((https://heroicons.com/) - Beautiful hand-crafted SVG icons.
 
 ## Getting Started
 
