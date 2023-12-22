@@ -1,6 +1,6 @@
 # NBA App
 
-This project is a web application focused on NBA-related data. It utilizes various libraries and tools for development and testing.
+This project is a web application focused on NBA-related data. 
 
 ## Technologies Used
 
